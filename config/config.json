@@ -1,0 +1,42 @@
+{
+  "system": {
+    "name": "工业设备数据模拟系统",
+    "version": "1.0.0",
+    "debug": true
+  },
+  "database": {
+    "type": "sqlite",
+    "path": "data/plc_data.db",
+    "backup_interval": 3600
+  },
+  "modbus": {
+    "enabled": true,
+    "port": 502,
+    "host": "127.0.0.1",
+    "update_interval": 1000,
+    "registers": {
+      "temperature": {"address": 0, "type": "float"},
+      "pressure": {"address": 2, "type": "float"},
+      "flow": {"address": 4, "type": "float"},
+      "status": {"address": 6, "type": "int"}
+    }
+  },
+  "socket": {
+    "enabled": true,
+    "port": 8080,
+    "host": "127.0.0.1",
+    "update_interval": 500,
+    "data_format": "json"
+  },
+  "web": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "debug": true,
+    "refresh_interval": 5000
+  },
+  "analysis": {
+    "enabled": true,
+    "window_size": 100,
+    "algorithms": ["moving_average", "trend_analysis", "anomaly_detection"]
+  }
+}

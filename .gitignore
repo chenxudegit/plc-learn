@@ -1,0 +1,53 @@
+# 构建输出
+build/
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# 编译缓存
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 数据库
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 配置文件（包含敏感信息）
+.env
+config/local.json
